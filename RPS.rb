@@ -32,12 +32,14 @@ begin
 end until ( you=="r" || you=="p" || you=="s")
 
 say("You picked #{you} and computer picked #{computer}.")
+
 if you == computer
   say ("It's a tie!")
 else 
   what_beats_what(you, computer)
   who_wins(you, computer)
 end
+
 say("Want a rematch?")
 rematch = gets.chomp
 end while rematch == "Y"
