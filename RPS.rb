@@ -30,7 +30,6 @@ begin
   say("Please choose one (r/p/s):")
   you = gets.chomp.downcase
 end until choices.include?(you)
-#until (you == "r" || you == "p" || you == "s")
 
 say("You picked #{you} and computer picked #{computer}.")
 
