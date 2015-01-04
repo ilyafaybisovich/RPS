@@ -13,10 +13,10 @@ def what_beats_what (object_1, object_2)
   end    
 end
 
-def who_wins (pl_1, pl_2)
-  combo = pl_1+pl_2
+def who_wins (player_1, player_2)
+  combo = player_1 + player_2
   if combo ==  "pr" || combo == "rs" || combo == "sp"
-    say ("You win!")
+    say("You win!")
   else 
     say("Computer wins.")
   end
@@ -28,8 +28,8 @@ computer = choices.sample
  
 begin
   say("Please choose one (r/p/s):")
-  you = gets.chomp
-end until ( you=="r" || you=="p" || you=="s")
+  you = gets.chomp.downcase
+end until (you == "r" || you == "p" || you == "s")
 
 say("You picked #{you} and computer picked #{computer}.")
 
@@ -41,5 +41,5 @@ else
 end
 
 say("Want a rematch?")
-rematch = gets.chomp
+rematch = gets.chomp.upcase
 end while rematch == "Y"
